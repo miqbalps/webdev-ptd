@@ -12,6 +12,12 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes : {
+        flying : {
+          '0%, 100%' : {transform : 'translateY(0)'},
+          '50%' : {transform : 'translateY(-4%)'},
+        },
+      }
     },
   },
   plugins: [],

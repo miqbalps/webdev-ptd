@@ -3,19 +3,35 @@
 import Image from "next/image";
 import { Poppins } from "next/font/google";
 import { useState } from "react";
+import { FaCaretDown } from "react-icons/fa6"
 
 const poppins = Poppins({ subsets: ["latin"], weight: "600" });
 
 function Navbar() {
   const [navState, setNavState] = useState(true)
+  const [mainState, setMainState] = useState(true)
   function showNav() {
-    navState ? setNavState(!navState) : setNavState(!navState)
+    setNavState(!navState)
+  }
+  function showMain() {
+    if (window.innerWidth < 1024) {
+      setMainState(!mainState)
+    }
   }
   return (
     <header className="fixed z-10 top-0 right-0 left-0 flex justify-end p-4 text-xl lg:backdrop-blur-sm">
       <nav className={`${poppins.className} ${navState ? '-translate-y-full' : 'translate-y-0'} lg:translate-y-0 duration-500 text-white lg:mr-10 absolute -z-10 top-0 left-0 right-0 lg:static bg-[#971313] lg:bg-transparent`}>
         <a className="lg:ml-7 mb-5 text-center mt-16 block lg:inline" href="#start">Start</a>
-        <a className="lg:ml-7 mb-5 text-center block lg:inline" href="#main">Main</a>
+        <div className="lg:ml-7 mb-5 text-center group/container block lg:inline lg:cursor-default cursor-pointer">
+          <button className="" onClick={showMain}>Main<FaCaretDown className="inline"/></button> 
+          <div className={`${mainState ? 'h-0' : 'h-auto'} lg:absolute overflow-hidden bg-blue-500 text-lg lg:translate-x-[4.5rem] lg:group-hover/container:bg-red-500 duration-500`}>
+            <a href="#pengertian" className="group"><div className="py-2 group-hover:bg-red-500 px-4">Pengertian</div></a>
+            <a href="#alasan" className="group"><div className="py-2 group-hover:bg-red-500 px-4">Alasan</div></a>
+            <a href="#jenis" className="group"><div className="py-2 group-hover:bg-red-500 px-4">Jenis</div></a>
+            <a href="#skill" className="group"><div className="py-2 group-hover:bg-red-500 px-4">Skill</div></a>
+            <a href="#cara" className="group"><div className="py-2 group-hover:bg-red-500 px-4">Cara</div></a>
+          </div>
+        </div>
         <a className="lg:ml-7 mb-5 text-center block lg:inline" href="#about">About</a>
         <a className="lg:ml-7 mb-8 text-center block lg:inline" href="#references">References</a>
       </nav>
@@ -52,6 +68,7 @@ function Main(params) {
   return (
     <main className="h-96">
       <p>
+      <FaCaretDown/>
         lorem
       </p>
     </main>

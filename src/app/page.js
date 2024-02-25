@@ -56,7 +56,7 @@ function Navbar() {
 
 function Start() {
   return (
-    <section className="bg-[#971313] h-screen grid lg:grid-cols-2 grid-cols-1 justify-items-center items-center">
+    <section className="bg-gradient-to-t from-red-950 to-[#971313] h-screen grid lg:grid-cols-2 grid-cols-1 justify-items-center items-center">
       <div className="order-2 lg:order-1">
         <h1 className={`${poppins.className} mb-10 lg:text-7xl text-4xl text-white`}>Web Developer</h1>
         <a href="#main" className={`${poppins.className} text-2xl px-6 py-4 bg-white rounded-sm hover:bg-gray-700 hover:text-white shadow-2xl duration-200`}>Start here</a>
@@ -68,7 +68,7 @@ function Start() {
   )
 }
 
-function Main(params) {
+function Main() {
   return (
     <main id="main" className="lg:p-16 p-6 bg-[#F9F9F9]">
       <section className="mt-4 lg:mt-1">
@@ -124,23 +124,93 @@ function Main(params) {
       </section>
       <section id="cara">
         <h3 className="font-bold text-xl lg:text-2xl">Cara menjadi Web Developer</h3>
-        <p>Untuk web developer tentunya bukan hal yang mudah.kita harus terus belajar dan berlatih secara bertahap dan konsisten.misalnya membuat project kecil kecilan seperti portofolio atau yang lainya. berikut adalah contoh project</p>
-        <p>Rekomendasi course online untuk membantu mengembangkan kemampuan pembuatan website-mu.</p>
+        <p className="text-base lg:text-lg text-justify">Untuk web developer tentunya bukan hal yang mudah.kita harus terus belajar dan berlatih secara bertahap dan konsisten.misalnya membuat project kecil kecilan seperti portofolio atau yang lainya. berikut adalah contoh project</p>
+        <h3 className="font-bold text-lg lg:text-xl text-center mt-7">Rekomendasi Belajar</h3>
+        <p className="text-base lg:text-lg text-center my-5">Rekomendasi course online untuk membantu mengembangkan kemampuan pembuatan website-mu.</p>
+        <div className="mb-7 overflow-hidden py-4">
+          <div className="flex flex-nowrap animate-[autoscroll_20s_linear_infinite]">
+            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/dicoding.svg"/>
+            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/freecodecamp.svg"/>
+            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/progate.svg"/>
+            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/udemy.svg"/>
+            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/codepolitan.svg"/>
+            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/harisenin.svg"/>
+            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/dicoding.svg"/>
+            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/freecodecamp.svg"/>
+            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/progate.svg"/>
+            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/udemy.svg"/>
+            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/codepolitan.svg"/>
+            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/harisenin.svg"/>
+          </div>
+        </div>
       </section>
       <section id="about">
-        <h3 className="font-bold text-xl lg:text-2xl">About Us</h3>
-        <div className="flex">
-          <div className="rounded-lg overflow-hidden shadow-2xl">
-            <div className="bg-red-800 h-36"></div>
+        <h3 className="font-bold text-xl lg:text-2xl mt-7">About Us</h3>
+        <div className="flex justify-around flex-wrap">
+          <div className="rounded-lg overflow-hidden shadow-2xl mt-10">
+            <div className="bg-[url('/people.jpg')] bg-center bg-cover h-44"></div>
             <div className="p-6">
               <h4 className="font-bold text-center">152023073</h4>
-              <h4 className="font-bold text-center">Dindin Imanudin</h4>
+              <h4 className="font-bold text-center my-5">Dindin Imanudin</h4>
               <div className="text-center">
-                <a className="text-4xl text-red-900 mx-2" href=""><FaInstagram className="inline"/></a>
-                <a className="text-4xl text-red-900 mx-2" href=""><FaGithub className="inline"/></a>
-                <a className="text-4xl text-red-900 mx-2" href=""><FaLinkedin className="inline"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
               </div>
             </div>
+            <div className="bg-[#971313] h-4"></div>
+          </div>
+          <div className="rounded-lg overflow-hidden shadow-2xl mt-10">
+            <div className="bg-[url('/people.jpg')] bg-center bg-cover h-44"></div>
+            <div className="p-6">
+              <h4 className="font-bold text-center">152023073</h4>
+              <h4 className="font-bold text-center my-5">Dindin Imanudin</h4>
+              <div className="text-center">
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
+              </div>
+            </div>
+            <div className="bg-[#971313] h-4"></div>
+          </div>
+          <div className="rounded-lg overflow-hidden shadow-2xl mt-10">
+            <div className="bg-[url('/people.jpg')] bg-center bg-cover h-44"></div>
+            <div className="p-6">
+              <h4 className="font-bold text-center">152023073</h4>
+              <h4 className="font-bold text-center my-5">Dindin Imanudin</h4>
+              <div className="text-center">
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
+              </div>
+            </div>
+            <div className="bg-[#971313] h-4"></div>
+          </div>
+          <div className="rounded-lg overflow-hidden shadow-2xl mt-10">
+            <div className="bg-[url('/people.jpg')] bg-center bg-cover h-44"></div>
+            <div className="p-6">
+              <h4 className="font-bold text-center">152023073</h4>
+              <h4 className="font-bold text-center my-5">Dindin Imanudin</h4>
+              <div className="text-center">
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
+              </div>
+            </div>
+            <div className="bg-[#971313] h-4"></div>
+          </div>
+          <div className="rounded-lg overflow-hidden shadow-2xl mt-10">
+            <div className="bg-[url('/people.jpg')] bg-center bg-cover h-44"></div>
+            <div className="p-6">
+              <h4 className="font-bold text-center">152023073</h4>
+              <h4 className="font-bold text-center my-5">Dindin Imanudin</h4>
+              <div className="text-center">
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
+              </div>
+            </div>
+            <div className="bg-[#971313] h-4"></div>
           </div>
         </div>
       </section>

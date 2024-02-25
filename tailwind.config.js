@@ -17,6 +17,9 @@ module.exports = {
           '0%, 100%' : {transform : 'translateY(0)'},
           '50%' : {transform : 'translateY(-4%)'},
         },
+        autoscroll : {
+          'to' : {transform : 'translate(-108%)'},
+        },
       }
     },
   },

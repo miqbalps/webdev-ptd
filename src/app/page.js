@@ -7,6 +7,7 @@ import { FaCaretDown } from "react-icons/fa6"
 import { FaInstagram } from "react-icons/fa6"
 import { FaGithub } from "react-icons/fa6"
 import { FaLinkedin } from "react-icons/fa6"
+import { FaMoneyBillWave } from "react-icons/fa6"
 
 
 const poppins = Poppins({ subsets: ["latin"], weight: "600" });
@@ -36,7 +37,7 @@ function Navbar() {
             <a href="#cara" className="group"><div className="py-2 group-hover:bg-gray-600 px-4 h-full lg:h-auto">Cara</div></a>
           </div>
         </div>
-        <a className="lg:ml-7 mb-5 text-center block lg:inline" href="#about">About</a>
+        <a className="lg:ml-7 mb-5 text-center block lg:inline" href="#contact">Contact</a>
         <a className="lg:ml-7 mb-8 text-center block lg:inline" href="#references">References</a>
       </nav>
       <div onClick={showNav} className='lg:hidden'>
@@ -70,7 +71,7 @@ function Start() {
 
 function Main() {
   return (
-    <main id="main" className="lg:p-16 p-6 bg-[#F9F9F9]">
+    <main id="main" className="lg:py-16 lg:px-40 p-6 bg-[#F9F9F9]">
       <section className="mt-4 lg:mt-1">
         <p className="text-base lg:text-lg text-justify">Hasil riset yang dilakukan Bank Dunia dan McKinsey menunjukkan bahwa Indonesia membutuhkan 9 juta talenta digital pada 2030. Jika dirata-rata, kebutuhan talenta digital ini mencapai 600.000 orang per tahun. Dari hasil riset ini bisa disimpulkan profesi it di indonesia itu lagi dibutuhin banget nih sekarang atau mungkin bahkan dimasa depan. Apalagi dengan perkembangan zaman  ini, teknologi semakin canggih sehingga profesi it menjadi salah satu profesi yang berpeluang sukses besar. Jadi bagi kalian nih yang masih terobang ambing di lautan mimpi profesi it mungkin bisa jadi salah satu pilihan kalian. Dari sekian banyak profesi it yang keren seperti data scientist, software enginer, dan cyber cecurity ada profesi it yang ga kalah keren nih, namanya web developer. Penasarankan tentang profesi yang keren satu ini? Tenang di blog ini mimin bakal kupas tuntas tentang profesi web developer mulai dari pengertian, jobdesk, skill, sampai penghasilan bakal mimin kupas habis. So keep reading.</p>
       </section>
@@ -79,7 +80,33 @@ function Main() {
         <p className="text-base lg:text-lg text-justify">Web Developer terdiri dari kata web dan Developer. Web atau biasa disebut World Wide Web (www) adalah bagian dari Internet yang terdiri dari halaman-halaman yang dapat diakses oleh browser Web. Sementara, developer adalah seseorang yang mengembangkan sesuatu. Jadi, Web developer adalah seseorang atau programmer yang bertugas membuat dan mengembangkan website</p>
       </section>
       <section id="alasan">
-        <h3 className="font-bold text-xl lg:text-2xl">Kenapa harus jadi Web Developer?</h3>
+        <h3 className="font-black text-xl lg:text-2xl">Kenapa harus jadi Web Developer?</h3>
+        <div className="grid lg:grid-cols-2 gap-6">
+            <div className="text-center relative shadow-lg border-4 rounded-md p-8">
+              <h1 className="absolute top-4 left-4 text-8xl text-red-200 inline">01</h1>
+              <FaMoneyBillWave className="inline relative m-auto text-8xl text-[#971313]"/>
+              <h1>Salary Tinggi</h1>
+              <p>Gaji Web developer dapat bervariasi tergantung pada kualifikasi dan kemampuan individu, serta kondisi pasar kerja di masa depan. Menurut Salary Explorer, gaji terendah web developer sebesar Rp5.000.000 per bulan dan gaji tertinggi sebesar Rp17.800.000 per bulan</p>
+            </div> 
+            <div className="text-center relative shadow-lg border-4 rounded-md p-8">
+              <h1 className="absolute top-4 left-4 text-8xl text-red-200 inline">02</h1>
+              <FaMoneyBillWave className="inline relative m-auto text-8xl text-[#971313]"/>
+              <h1>Bekerja Fleksibel</h1>
+              <p>Selain bekerja di kantor, seorang Web Developer juga bisa bekerja dari rumah karena kebanyakan web developer bisa Work from Anywhere (WFA)</p>
+            </div> 
+            <div className="text-center relative shadow-lg border-4 rounded-md p-8">
+              <h1 className="absolute top-4 left-4 text-8xl text-red-200 inline">03</h1>
+              <FaMoneyBillWave className="inline relative m-auto text-8xl text-[#971313]"/>
+              <h1>Prospek Karier yang Menjanjikan</h1>
+              <p>Tingginya minat para pelaku usaha terhadap website, membuat prospek karir bagi seorang Web Developer semakin menjanjikan</p>
+            </div> 
+            <div className="text-center relative shadow-lg border-4 rounded-md p-8">
+              <h1 className="absolute top-4 left-4 text-8xl text-red-200 inline">04</h1>
+              <FaMoneyBillWave className="inline relative m-auto text-8xl text-[#971313]"/>
+              <h1>IT Akan Terus Mengalami Perkembangan</h1>
+              <p>Teknologi akan terus berkembang seiring berjalannya waktu, inilah mengapa profesi web developer akan bertahan hingga puluhan tahun kedepan.</p>
+            </div> 
+        </div>
         <p className="text-base lg:text-lg text-justify">lorem ipsum</p>
       </section>
       <section id="jenis">
@@ -144,8 +171,8 @@ function Main() {
           </div>
         </div>
       </section>
-      <section id="about">
-        <h3 className="font-bold text-xl lg:text-2xl mt-7">About Us</h3>
+      <section id="contact">
+        <h3 className="font-bold text-xl lg:text-2xl mt-7">Contact</h3>
         <div className="flex justify-around flex-wrap">
           <div className="rounded-lg overflow-hidden shadow-2xl mt-10">
             <div className="bg-[url('/people.jpg')] bg-center bg-cover h-44"></div>

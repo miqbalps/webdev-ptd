@@ -33,12 +33,12 @@ function Navbar() {
     }
   }
   return (
-    <header className="fixed z-10 top-0 right-0 left-0 flex justify-end p-4 text-xl lg:bg-[#971313]">
+    <header className="fixed z-10 top-0 right-0 left-0 flex justify-end px-4 py-3 text-xl lg:bg-[#971313]">
       <nav className={`${poppins.className} ${navState ? '-translate-y-full' : 'translate-y-0'} lg:translate-y-0 duration-500 text-white lg:mr-10 absolute -z-10 top-0 left-0 right-0 lg:static bg-[#971313] lg:bg-transparent shadow-xl lg:shadow-none`}>
-        <a className="lg:ml-7 mb-5 text-center mt-16 block lg:inline" href="#start">Start</a>
-        <div className="lg:ml-7 mb-5 text-center group/container block lg:inline lg:cursor-default cursor-pointer lg:shadow-2xl">
-          <button className="w-full lg:w-auto" onClick={showMain}>Main<FaCaretDown className="inline"/></button> 
-          <div className={`${mainState ? 'h-0' : 'h-56'} lg:h-auto lg:hidden lg:absolute overflow-hidden bg-gray-700 text-lg lg:translate-x-[4.5rem] lg:group-hover/container:block duration-500`}>
+        <a className="lg:ml-1 mb-5 text-center mt-16 block lg:inline hover:bg-gray-700 py-2 px-6 lg:rounded-full" href="#start">Start</a>
+        <div className="lg:ml-1 mb-5 text-center group/container block lg:inline lg:cursor-default cursor-pointer lg:shadow-2xl">
+          <button className="w-full lg:w-auto hover:bg-gray-700 py-2 px-6 lg:rounded-full" onClick={showMain}>Main<FaCaretDown className="inline"/></button> 
+          <div className={`${mainState ? 'h-0' : 'h-56'} lg:h-auto lg:hidden lg:absolute overflow-hidden bg-gray-700 text-lg lg:translate-x-[6rem] lg:group-hover/container:block duration-500`}>
             <a href="#pengertian" className="group"><div className="py-2 group-hover:bg-gray-600 px-4">Pengertian</div></a>
             <a href="#alasan" className="group"><div className="py-2 group-hover:bg-gray-600 px-4">Alasan</div></a>
             <a href="#jenis" className="group"><div className="py-2 group-hover:bg-gray-600 px-4">Jenis</div></a>
@@ -46,8 +46,8 @@ function Navbar() {
             <a href="#cara" className="group"><div className="py-2 group-hover:bg-gray-600 px-4 h-full lg:h-auto">Cara</div></a>
           </div>
         </div>
-        <a className="lg:ml-7 mb-5 text-center block lg:inline" href="#contact">Contact</a>
-        <a className="lg:ml-7 mb-8 text-center block lg:inline" href="#references">References</a>
+        <a className="lg:ml-1 mb-5 text-center block lg:inline hover:bg-gray-700 py-2 px-6 lg:rounded-full" href="#contact">Contact</a>
+        <a className="lg:ml-1 mb-8 text-center block lg:inline hover:bg-gray-700 py-2 px-6 lg:rounded-full" href="#references">References</a>
       </nav>
       <div onClick={showNav} className='lg:hidden'>
         <div className={`${
@@ -127,9 +127,9 @@ function Main() {
             <h4 className="font-bold text-lg lg:text-xl">Frontend Developer</h4>
             <p className="my-6">Frontend Developer adalah seseorang yang bertugas untuk mengembangkan dan memelihara bagian depan suatu website</p>
             <div>
-              <Image className="inline mx-2 w-auto" alt="html" width={50} height={50} src="html.svg"/>
-              <Image className="inline mx-2 w-auto" alt="html" width={50} height={50} src="css.svg"/>
-              <Image className="inline mx-2 w-auto" alt="html" width={50} height={50} src="js.svg"/>
+              <Image className="inline mx-2 w-16" alt="React" width={100} height={10} src="/jenis/frontend/react.svg"/>
+              <Image className="inline mx-2 w-16" alt="Vue" width={100} height={10} src="/jenis/frontend/vue.svg"/>
+              <Image className="inline mx-2 w-16" alt="Angular" width={100} height={10} src="/jenis/frontend/angular.svg"/>
             </div>
           </div>
           <div className="p-6 rounded-xl bg-gradient-to-r from-[#971313] to-red-950 text-center text-white">
@@ -137,9 +137,9 @@ function Main() {
             <h4 className="font-bold text-lg lg:text-xl">Backend Developer</h4>
             <p className="my-6">Backend Developer adalah seseorang yang bertanggung jawab untuk melakukan pengembangan serta pemeriharaan server dan database</p>
             <div>
-              <Image className="inline mx-2 w-auto" alt="html" width={50} height={50} src="java.svg"/>
-              <Image className="inline mx-2 w-auto" alt="html" width={50} height={50} src="python.svg"/>
-              <Image className="inline mx-2 w-auto" alt="html" width={50} height={50} src="php.svg"/>
+              <Image className="inline mx-2 w-16" alt="Golang" width={100} height={10} src="/jenis/backend/golang.svg"/>
+              <Image className="inline mx-2 w-16" alt="MySQL" width={100} height={10} src="/jenis/backend/mysql.svg"/>
+              <Image className="inline mx-2 w-16" alt="Php" width={100} height={10} src="/jenis/backend/php.svg"/>
             </div>
           </div>
           <div className="p-6 rounded-xl bg-gradient-to-r from-[#971313] to-red-950 text-center text-white">
@@ -147,9 +147,9 @@ function Main() {
             <h4 className="font-bold text-lg lg:text-xl">Fullstack Developer</h4>
             <p className="my-6">Fullstack Developer adalah seseorang yang melakukan pekerjaan front-end dan back-end sekaligus.</p>
             <div>
-              <Image className="inline mx-2 w-auto" alt="html" width={50} height={50} src="js.svg"/>
-              <Image className="inline mx-2 w-auto" alt="html" width={50} height={50} src="python.svg"/>
-              <Image className="inline mx-2 w-auto" alt="html" width={50} height={50} src="php.svg"/>
+              <Image className="inline mx-2 w-16 bg-white rounded-full p-1" alt="Next JS" width={100} height={10} src="/jenis/fullstack/nextjs.svg"/>
+              <Image className="inline mx-2 w-16" alt="Node JS" width={100} height={10} src="/jenis/fullstack/nodejs.svg"/>
+              <Image className="inline mx-2 w-16" alt="MongoDB" width={100} height={10} src="/jenis/fullstack/mongodb.svg"/>
             </div>
           </div>
         </div>
@@ -185,24 +185,13 @@ function Main() {
         </div>
       </section>
       <section id="cara">
-        <h3 className="font-bold text-xl lg:text-2xl">Cara menjadi Web Developer</h3>
+      <h3 className="font-bold text-xl lg:text-3xl mb-6 mt-10">Cara menjadi <span className="text-[#971313]">Web Developer</span></h3>
         <p className="text-base lg:text-lg text-justify">Untuk web developer tentunya bukan hal yang mudah.kita harus terus belajar dan berlatih secara bertahap dan konsisten.misalnya membuat project kecil kecilan seperti portofolio atau yang lainya. berikut adalah contoh project</p>
         <h3 className="font-bold text-lg lg:text-xl text-center mt-7">Rekomendasi Belajar</h3>
         <p className="text-base lg:text-lg text-center my-5">Rekomendasi course online untuk membantu mengembangkan kemampuan pembuatan website-mu.</p>
         <div className="mb-7 overflow-hidden py-4">
-          <div className="flex flex-nowrap animate-[autoscroll_20s_linear_infinite]">
-            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/dicoding.svg"/>
-            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/freecodecamp.svg"/>
-            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/progate.svg"/>
-            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/udemy.svg"/>
-            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/codepolitan.svg"/>
-            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/harisenin.svg"/>
-            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/dicoding.svg"/>
-            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/freecodecamp.svg"/>
-            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/progate.svg"/>
-            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/udemy.svg"/>
-            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/codepolitan.svg"/>
-            <Image className="inline w-auto mx-6" alt="html" width={50} height={50} src="/course/harisenin.svg"/>
+          <div className="flex flex-nowrap">
+            <Image className="inline w-auto mx-6" alt="dicoding" width={200} height={200} src="/course/harisenin.png"/>
           </div>
         </div>
       </section>

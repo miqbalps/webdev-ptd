@@ -1,9 +1,12 @@
 "use client"
 
 import Image from "next/image";
-import { Poppins } from "next/font/google";
 import { useState } from "react";
-import { FaCaretDown } from "react-icons/fa6"
+// font
+import { Poppins } from "next/font/google";
+import { Righteous } from "next/font/google";
+// icons
+import { FaAngleDown } from "react-icons/fa6"
 import { FaInstagram } from "react-icons/fa6"
 import { FaGithub } from "react-icons/fa6"
 import { FaLinkedin } from "react-icons/fa6"
@@ -20,6 +23,7 @@ import { FaCode } from "react-icons/fa6"
 
 
 const poppins = Poppins({ subsets: ["latin"], weight: "600" });
+const righteous = Righteous({ subsets: ["latin"], weight: "400" });
 
 function Navbar() {
   const [navState, setNavState] = useState(true)
@@ -33,21 +37,22 @@ function Navbar() {
     }
   }
   return (
-    <header className="fixed z-10 top-0 right-0 left-0 flex justify-end px-4 py-3 text-xl lg:bg-[#971313]">
+    <header className="fixed z-10 top-0 right-0 left-0 flex justify-between items-center py-3 lg:py-0 px-4 text-lg lg:bg-[#971313]">
+      <h1 className={`${righteous.className} ${navState ? 'opacity-0' : 'opacity-100'} duration-700 lg:opacity-100 text-white text-2xl lg:text-3xl ml-4 lg:ml-6`}>Codenatic</h1>
       <nav className={`${poppins.className} ${navState ? '-translate-y-full' : 'translate-y-0'} lg:translate-y-0 duration-500 text-white lg:mr-10 absolute -z-10 top-0 left-0 right-0 lg:static bg-[#971313] lg:bg-transparent shadow-xl lg:shadow-none`}>
-        <a className="lg:ml-1 mb-5 text-center mt-16 block lg:inline hover:bg-gray-700 py-2 px-6 lg:rounded-full" href="#start">Start</a>
-        <div className="lg:ml-1 mb-5 text-center group/container block lg:inline lg:cursor-default cursor-pointer lg:shadow-2xl">
-          <button className="w-full lg:w-auto hover:bg-gray-700 py-2 px-6 lg:rounded-full" onClick={showMain}>Main<FaCaretDown className="inline"/></button> 
-          <div className={`${mainState ? 'h-0' : 'h-56'} lg:h-auto lg:hidden lg:absolute overflow-hidden bg-gray-700 text-lg lg:translate-x-[6rem] lg:group-hover/container:block duration-500`}>
-            <a href="#pengertian" className="group"><div className="py-2 group-hover:bg-gray-600 px-4">Pengertian</div></a>
-            <a href="#alasan" className="group"><div className="py-2 group-hover:bg-gray-600 px-4">Alasan</div></a>
-            <a href="#jenis" className="group"><div className="py-2 group-hover:bg-gray-600 px-4">Jenis</div></a>
-            <a href="#skill" className="group"><div className="py-2 group-hover:bg-gray-600 px-4">Skill</div></a>
-            <a href="#cara" className="group"><div className="py-2 group-hover:bg-gray-600 px-4 h-full lg:h-auto">Cara</div></a>
+        <a className="lg:ml-1 mt-16 block lg:inline lg:hover:bg-gray-800 px-6 py-2 lg:py-4" href="#start">Start</a>
+        <div className="lg:ml-1 group/container block lg:inline lg:cursor-default cursor-pointer lg:shadow-2xl">
+          <button className='w-full lg:w-auto lg:hover:bg-gray-800 px-6 py-2 lg:py-4 text-left lg:inline flex justify-between' onClick={showMain}>Main<FaAngleDown className={`${mainState ? '-rotate-90' : 'rotate-0'} lg:rotate-0 inline lg:ml-1 lg:text-left`}/></button> 
+          <div className={`${mainState ? 'h-0' : 'h-56'} lg:h-auto lg:hidden lg:absolute overflow-auto bg-gray-800 text-base lg:group-hover/container:block duration-500 px-8 lg:py-2`}>
+            <a href="#pengertian" className="group"><div className="pb-2 pt-4 border-b-[1px] border-white border-solid"><div className="group-hover:translate-x-2 duration-100 relative">Apa itu Web Developer?</div></div></a>
+            <a href="#alasan" className="group"><div className="py-2 border-b-[1px] border-white border-solid"><div className="group-hover:translate-x-2 duration-100 relative">Kenapa harus jadi Web Developer?</div></div></a>
+            <a href="#jenis" className="group"><div className="py-2 border-b-[1px] border-white border-solid"><div className="group-hover:translate-x-2 duration-100 relative">Jenis Web Developer</div></div></a>
+            <a href="#skill" className="group"><div className="py-2 border-b-[1px] border-white border-solid"><div className="group-hover:translate-x-2 duration-100 relative">Skill yang dibutuhkan Web Developer</div></div></a>
+            <a href="#cara" className="group"><div className="pt-2 pb-4 lg:h-auto"><div className="group-hover:translate-x-2 duration-100 relative">Cara menjadi Web Developer</div></div></a>
           </div>
         </div>
-        <a className="lg:ml-1 mb-5 text-center block lg:inline hover:bg-gray-700 py-2 px-6 lg:rounded-full" href="#contact">Contact</a>
-        <a className="lg:ml-1 mb-8 text-center block lg:inline hover:bg-gray-700 py-2 px-6 lg:rounded-full" href="#references">References</a>
+        <a className="lg:ml-1 block lg:inline lg:hover:bg-gray-800 px-6 py-2 lg:py-4" href="#contact">Contact</a>
+        <a className="lg:ml-1 mb-8 block lg:inline lg:hover:bg-gray-800 px-6 py-2 lg:py-4" href="#comment">Comment</a>
       </nav>
       <div onClick={showNav} className='lg:hidden'>
         <div className={`${
@@ -66,19 +71,22 @@ function Navbar() {
 
 function Start() {
   return (
-    <section className="bg-gradient-to-t from-red-950 to-[#971313] h-screen grid lg:grid-cols-2 grid-cols-1 justify-items-center items-center">
-      <div className="order-2 lg:order-1">
+    <section id="start" className="bg-gradient-to-t from-red-950 to-[#971313] small-y:h-fit small-y:py-10 h-screen grid lg:text-left text-center lg:grid-cols-2 grid-cols-1 justify-items-center lg:items-center gap-y-8">
+      <div className="order-2 lg:order-1 self-start lg:self-center">
         <h1 className={`${poppins.className} mb-10 lg:text-7xl text-4xl text-white`}>Web Developer</h1>
-        <a href="#main" className={`${poppins.className} text-2xl px-6 py-4 bg-white rounded-sm hover:bg-gray-700 hover:text-white shadow-2xl duration-200`}>Start here</a>
+        <a href="#main" className={`${poppins.className} text-2xl px-6 py-4 bg-white rounded-sm hover:bg-gray-800 hover:text-white shadow-2xl duration-200`}>Start here</a>
       </div>
-      <div className="order-1 lg:order-2">
+      <div className="order-1 lg:order-2 lg:self-center self-end">
         <Image priority={true} className="animate-[flying_4s_ease-in-out_infinite]" src="programming.svg" width={500} height={500} alt="Web Developer"/>
       </div>
     </section>
   )
 }
-
 function Main() {
+  const [selectedItem, setSelectedItem] = useState(null)
+  function handleSelect(item) {
+    setSelectedItem(item)
+  }
   return (
     <main id="main" className="lg:py-16 lg:px-40 p-6 bg-[#F9F9F9]">
       <section className="mt-4 lg:mt-1">
@@ -187,12 +195,17 @@ function Main() {
       <section id="cara">
       <h3 className="font-bold text-xl lg:text-3xl mb-6 mt-10">Cara menjadi <span className="text-[#971313]">Web Developer</span></h3>
         <p className="text-base lg:text-lg text-justify">Untuk web developer tentunya bukan hal yang mudah.kita harus terus belajar dan berlatih secara bertahap dan konsisten.misalnya membuat project kecil kecilan seperti portofolio atau yang lainya. berikut adalah contoh project</p>
-        <h3 className="font-bold text-lg lg:text-xl text-center mt-7">Rekomendasi Belajar</h3>
+        <h3 className="font-bold text-lg lg:text-2xl text-center mt-7">Rekomendasi Belajar</h3>
         <p className="text-base lg:text-lg text-center my-5">Rekomendasi course online untuk membantu mengembangkan kemampuan pembuatan website-mu.</p>
-        <div className="mb-7 overflow-hidden py-4">
-          <div className="flex flex-nowrap">
-            <Image className="inline w-auto mx-6" alt="dicoding" width={200} height={200} src="/course/harisenin.png"/>
-          </div>
+        <div className="flex flex-wrap justify-around gap-x-2 lg:gap-x-16 items-center">
+          <Image className="inline w-28 lg:w-48 aspect-square grayscale hover:grayscale-0" alt="dicoding" width={1000} height={1000} src="/course/dicoding.svg"/>
+          <Image className="inline w-28 lg:w-48 aspect-square grayscale hover:grayscale-0" alt="dicoding" width={1000} height={1000} src="/course/binaracademy.svg"/>
+          <Image className="inline w-28 lg:w-48 aspect-square grayscale hover:grayscale-0" alt="dicoding" width={1000} height={1000} src="/course/codeacademy.svg"/>
+          <Image className="inline w-28 lg:w-48 aspect-square grayscale hover:grayscale-0" alt="dicoding" width={1000} height={1000} src="/course/coursera.svg"/>
+          <Image className="inline w-28 lg:w-48 aspect-square grayscale hover:grayscale-0" alt="dicoding" width={1000} height={1000} src="/course/freecodecamp.svg"/>
+          <Image className="inline w-28 lg:w-48 aspect-square grayscale hover:grayscale-0" alt="dicoding" width={1000} height={1000} src="/course/hackerrank.svg"/>
+          <Image className="inline w-28 lg:w-36 aspect-square grayscale hover:grayscale-0" alt="dicoding" width={1000} height={1000} src="/course/udemy.svg"/>
+          <Image className="inline w-28 lg:w-24 aspect-square grayscale hover:grayscale-0" alt="dicoding" width={1000} height={1000} src="/course/w3school.svg"/>
         </div>
       </section>
       <section id="contact">
@@ -267,11 +280,42 @@ function Main() {
           </div>
         </div>
       </section>
-      <section id="references">
-        <h3 className="font-bold text-xl lg:text-2xl">References</h3>
+      <section id="comment">
+        <h3 className="font-bold text-xl lg:text-2xl">Comment</h3>
         <p>lorem</p>
       </section>
     </main>
+  )
+}
+function Footer() {
+  const links = [['start', 'Start'], ['contact', 'Contact'], ['comment', 'Comment']]
+  const mainLinks = [['pengertian', 'Pengertian'], ['alasan', 'Alasan'], ['jenis', 'Jenis'], ['cara', 'Cara']]
+  return (
+    <footer className="text-white">
+      <div className="bg-[#971313]">
+        <div className="max-w-5xl m-auto py-6 flex flex-wrap justify-around">
+          <div className="px-1">
+            <h1 className={`${righteous.className} text-white text-2xl lg:text-3xl`}>Codenatic</h1>
+          </div>
+          <div className="px-1">
+            <h3 className="font-bold text-lg mb-1">Links</h3>
+            {links.map(link => (
+              <a key={link[0]} href={`#${link[0]}`} className="block after:block after:h-1 after:bg-gray-800 after:w-0 hover:after:w-11/12 after:duration-200 origin-center">{link[1]}</a>
+            ))}
+          </div>
+          <div className="px-1">
+          <h3 className="font-bold text-lg mb-1">Main</h3>
+            {mainLinks.map(link => (
+              <a key={link[0]} href={`#${link[0]}`} className="block after:block after:h-1 after:bg-gray-800 after:w-0 hover:after:w-11/12 after:duration-200 origin-center">{link[1]}</a>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="bg-gray-800 py-2 text-center text-sm">
+        <p className="mb-1">Copyright © 2024 <span className="font-bold">Codenatic</span></p>
+        <p>Made with ❤️ using <b>Next.js</b></p>
+      </div>
+    </footer>
   )
 }
 
@@ -282,6 +326,7 @@ export default function Page() {
       <Navbar/>
       <Start/>
       <Main/>
+      <Footer/>
     </>
   );
 }

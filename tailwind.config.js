@@ -20,6 +20,9 @@ module.exports = {
         autoscroll : {
           'to' : {transform : 'translate(-108%)'},
         },
+      }, 
+      screens : {
+        'small-y': { 'raw': '(max-height: 600px)' },
       }
     },
   },

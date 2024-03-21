@@ -20,6 +20,8 @@ import { FaFileCode } from "react-icons/fa6"
 import { FaBrain } from "react-icons/fa6"
 import { FaBook } from "react-icons/fa6"
 import { FaCode } from "react-icons/fa6"
+// react safe
+import Safe from "react-safe"
 
 
 const poppins = Poppins({ subsets: ["latin"], weight: "600" });
@@ -90,7 +92,7 @@ function Main() {
   return (
     <main id="main" className="lg:py-16 lg:px-40 p-6 bg-[#F9F9F9]">
       <section className="mt-4 lg:mt-1">
-        <p className="text-base lg:text-lg text-justify">Hasil riset yang dilakukan Bank Dunia dan McKinsey menunjukkan bahwa Indonesia membutuhkan 9 juta talenta digital pada 2030. Jika dirata-rata, kebutuhan talenta digital ini mencapai 600.000 orang per tahun. Dari hasil riset ini bisa disimpulkan profesi it di indonesia itu lagi dibutuhin banget nih sekarang atau mungkin bahkan dimasa depan. Apalagi dengan perkembangan zaman  ini, teknologi semakin canggih sehingga profesi it menjadi salah satu profesi yang berpeluang sukses besar. Jadi bagi kalian nih yang masih terobang ambing di lautan mimpi profesi it mungkin bisa jadi salah satu pilihan kalian. Dari sekian banyak profesi it yang keren seperti data scientist, software enginer, dan cyber cecurity ada profesi it yang ga kalah keren nih, namanya web developer. Penasarankan tentang profesi yang keren satu ini? Tenang di blog ini mimin bakal kupas tuntas tentang profesi web developer mulai dari pengertian, jobdesk, skill, sampai penghasilan bakal mimin kupas habis. So keep reading.</p>
+        <p className="text-base lg:text-lg text-justify">Berdasarkan riset Bank Dunia dan McKinsey, Indonesia membutuhkan <span className="font-bold text-[#971313]">9 juta talenta</span> digital pada tahun 2030. Hal ini menunjukkan kebutuhan signifikan terhadap tenaga profesional di bidang teknologi informasi (IT), rata-rata mencapai <span className="font-bold text-[#971313]">600.000 orang</span> per tahun. Perkembangan zaman yang semakin canggih mendorong profesional IT menjadi salah satu peluang karir dengan prospek <span className="font-bold text-[#971313]">kesuksesan besar</span>. Bagi individu yang masih mencari arah karir, profesi IT, <span className="font-bold text-[#971313]">Web Developer</span> menjadi salah satu yang patut dipertimbangkan. Disini akan di kupas tuntas tentang profesi <span className="font-bold text-[#971313]">Web Developer</span> mulai dari pengertian, jobdesk, skill dan lainnya</p>
       </section>
       <section id="pengertian">
         <h3 className="font-bold text-xl lg:text-3xl mt-6 mb-4">Apa itu <span className="text-[#971313]">Web Developer</span>?</h3>
@@ -211,89 +213,102 @@ function Main() {
       <section id="contact">
         <h3 className="font-bold text-xl lg:text-3xl mt-7 text-center">Contact</h3>
         <div className="flex justify-around flex-wrap">
-          <div className="rounded-lg overflow-hidden shadow-2xl mt-14">
-            <div className="bg-[url('/people.jpg')] bg-center bg-cover h-44"></div>
+          <div className="rounded-lg overflow-hidden shadow-2xl mt-14 max-w-64 relative relative">
+            <div className="bg-[url('/contact/dindin.jpg')] bg-center bg-cover h-44"></div>
             <div className="p-6">
-              <h4 className="font-bold text-center">152023073</h4>
-              <h4 className="font-bold text-center my-5">Dindin Imanudin</h4>
-              <div className="text-center">
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
+              <h4 className="font-bold text-center lg:text-lg text-[#971313]">152023073</h4>
+              <h4 className="font-bold text-center lg:text-xl text-lg my-5">Dindin Imanudin</h4>
+              <div className="text-center mb-4">
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://www.instagram.com/dindin.14/?igsh=ZmFvNjVjeDl1ZHo5"><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://github.com/dindinmhs"><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://www.linkedin.com/in/dindin-imanudin-00531229b/"><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
               </div>
             </div>
-            <div className="bg-[#971313] h-4"></div>
+            <div className="bg-[#971313] h-4 absolute left-0 right-0 bottom-0"></div>
           </div>
-          <div className="rounded-lg overflow-hidden shadow-2xl mt-14">
-            <div className="bg-[url('/people.jpg')] bg-center bg-cover h-44"></div>
+          <div className="rounded-lg overflow-hidden shadow-2xl mt-14 max-w-64 relative">
+            <div className="bg-[url('/contact/hendra.jpg')] bg-center bg-cover h-44"></div>
             <div className="p-6">
-              <h4 className="font-bold text-center">152023073</h4>
-              <h4 className="font-bold text-center my-5">Dindin Imanudin</h4>
-              <div className="text-center">
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
+              <h4 className="font-bold text-center lg:text-lg text-[#971313]">152023074</h4>
+              <h4 className="font-bold text-center lg:text-xl text-lg my-5">Hendra Darmawan</h4>
+              <div className="text-center mb-4">
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://www.instagram.com/hendraa_darmaawann?"><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://github.com/hendramhs"><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://www.linkedin.com/in/hendra-darmawan-9b9a1128b?trk=contact-info"><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
               </div>
             </div>
-            <div className="bg-[#971313] h-4"></div>
+            <div className="bg-[#971313] h-4 absolute left-0 right-0 bottom-0"></div>
           </div>
-          <div className="rounded-lg overflow-hidden shadow-2xl mt-14">
-            <div className="bg-[url('/people.jpg')] bg-center bg-cover h-44"></div>
+          <div className="rounded-lg overflow-hidden shadow-2xl mt-14 max-w-64 relative">
+            <div className="bg-[url('/contact/husni.jpg')] bg-center bg-cover h-44"></div>
             <div className="p-6">
-              <h4 className="font-bold text-center">152023073</h4>
-              <h4 className="font-bold text-center my-5">Dindin Imanudin</h4>
-              <div className="text-center">
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
+              <h4 className="font-bold text-center lg:text-lg text-[#971313]">152023088</h4>
+              <h4 className="font-bold text-center lg:text-xl text-lg my-5">Muhamad Husni Al Muhjiri</h4>
+              <div className="text-center mb-4">
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://www.instagram.com/hoesni_al/"><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://github.com/hoesnial"><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://www.linkedin.com/in/muhamadhusni"><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
               </div>
             </div>
-            <div className="bg-[#971313] h-4"></div>
+            <div className="bg-[#971313] h-4 absolute left-0 right-0 bottom-0"></div>
           </div>
         </div>
         <div className="flex justify-around flex-wrap">
-          <div className="rounded-lg overflow-hidden shadow-2xl mt-14">
-            <div className="bg-[url('/people.jpg')] bg-center bg-cover h-44"></div>
+          <div className="rounded-lg overflow-hidden shadow-2xl mt-14 max-w-64 relative">
+            <div className="bg-[url('/contact/tedy.jpg')] bg-center bg-cover h-44"></div>
             <div className="p-6">
-              <h4 className="font-bold text-center">152023073</h4>
-              <h4 className="font-bold text-center my-5">Dindin Imanudin</h4>
-              <div className="text-center">
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
+              <h4 className="font-bold text-center lg:text-lg text-[#971313]">152023151</h4>
+              <h4 className="font-bold text-center lg:text-xl text-lg my-5">Tedy Sukma Permana</h4>
+              <div className="text-center mb-4">
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://www.instagram.com/permanatedy_/"><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://github.com/TedyPermana24"><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
                 <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
               </div>
             </div>
-            <div className="bg-[#971313] h-4"></div>
+            <div className="bg-[#971313] h-4 absolute left-0 right-0 bottom-0"></div>
           </div>
-          <div className="rounded-lg overflow-hidden shadow-2xl mt-14">
-            <div className="bg-[url('/people.jpg')] bg-center bg-cover h-44"></div>
+          <div className="rounded-lg overflow-hidden shadow-2xl mt-14 max-w-64 relative">
+            <div className="bg-[url('/contact/pasha.jpg')] bg-center bg-cover h-44"></div>
             <div className="p-6">
-              <h4 className="font-bold text-center">152023073</h4>
-              <h4 className="font-bold text-center my-5">Dindin Imanudin</h4>
-              <div className="text-center">
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
-                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href=""><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
+              <h4 className="font-bold text-center lg:text-lg text-[#971313]">152023174</h4>
+              <h4 className="font-bold text-center lg:text-xl text-lg my-5">Muhammad Iqbal Pasha Al Farabi</h4>
+              <div className="text-center mb-4">
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://www.instagram.com/miqbalpasha_"><FaInstagram className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://github.com/miqbalps"><FaGithub className="inline group-hover:-translate-y-1 duration-200"/></a>
+                <a className="text-4xl text-gray-700 group hover:text-[#971313] mx-4" href="https://www.linkedin.com/in/iqbalpasha"><FaLinkedin className="inline group-hover:-translate-y-1 duration-200"/></a>
               </div>
             </div>
-            <div className="bg-[#971313] h-4"></div>
+            <div className="bg-[#971313] h-4 absolute left-0 right-0 bottom-0"></div>
           </div>
         </div>
       </section>
       <section id="comment">
-        <h3 className="font-bold text-xl lg:text-2xl">Comment</h3>
-        <p>lorem</p>
+        <h3 className="font-bold text-xl lg:text-3xl mt-12 mb-10 text-center text-[#971313]">Comment</h3>
+        <div id="disqus_thread"></div>
+        <Safe.script>
+          {
+            
+            (function() { // DON'T EDIT BELOW THIS LINE
+              if (typeof window !== "undefined") {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://codenatic.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+              }
+              })()
+          }
+        </Safe.script>
       </section>
     </main>
   )
 }
 function Footer() {
   const links = [['start', 'Start'], ['contact', 'Contact'], ['comment', 'Comment']]
-  const mainLinks = [['pengertian', 'Pengertian'], ['alasan', 'Alasan'], ['jenis', 'Jenis'], ['cara', 'Cara']]
+  const mainLinks = [['pengertian', 'Apa itu Web Developer?'], ['alasan', 'Kenapa harus jadi Web Developer?'], ['jenis', 'Jenis Web Developer'], ['cara', 'Cara menjadi Web Developer']]
   return (
     <footer className="text-white">
       <div className="bg-[#971313]">
-        <div className="max-w-5xl m-auto py-6 flex flex-wrap justify-around">
+        <div className="max-w-5xl lg:m-auto py-6 flex flex-wrap lg:flex-row ml-6 flex-col justify-around">
           <div className="px-1">
             <h1 className={`${righteous.className} text-white text-2xl lg:text-3xl`}>Codenatic</h1>
           </div>

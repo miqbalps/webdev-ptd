@@ -22,6 +22,8 @@ import { FaBook } from "react-icons/fa6"
 import { FaCode } from "react-icons/fa6"
 // react safe
 import Safe from "react-safe"
+// framer-motion
+import { useInView } from "framer-motion";
 
 
 const poppins = Poppins({ subsets: ["latin"], weight: "600" });
@@ -85,10 +87,6 @@ function Start() {
   )
 }
 function Main() {
-  const [selectedItem, setSelectedItem] = useState(null)
-  function handleSelect(item) {
-    setSelectedItem(item)
-  }
   return (
     <main id="main" className="lg:py-16 lg:px-40 p-6 bg-[#F9F9F9]">
       <section className="mt-4 lg:mt-1">
@@ -196,9 +194,9 @@ function Main() {
       </section>
       <section id="cara">
       <h3 className="font-bold text-xl lg:text-3xl mb-6 mt-10">Cara menjadi <span className="text-[#971313]">Web Developer</span></h3>
-        <p className="text-base lg:text-lg text-justify">Untuk web developer tentunya bukan hal yang mudah.kita harus terus belajar dan berlatih secara bertahap dan konsisten.misalnya membuat project kecil kecilan seperti portofolio atau yang lainya. berikut adalah contoh project</p>
+        <p className="text-base lg:text-lg text-justify">Untuk menjadi Web Developer tentunya bukan hal yang mudah. Kita harus terus belajar dan berlatih secara bertahap dan konsisten. Kalian dapat belajar dengan mengikuti bootcamp, course online, ataupun belajar secara otodidak.</p>
         <h3 className="font-bold text-lg lg:text-2xl text-center mt-7">Rekomendasi Belajar</h3>
-        <p className="text-base lg:text-lg text-center my-5">Rekomendasi course online untuk membantu mengembangkan kemampuan pembuatan website-mu.</p>
+        <p className="text-base lg:text-lg text-center my-5">Rekomendasi platform untuk membantu mengembangkan kemampuan pembuatan website-mu.</p>
         <div className="flex flex-wrap justify-around gap-x-2 lg:gap-x-16 items-center">
           <Image className="inline w-28 lg:w-48 aspect-square grayscale hover:grayscale-0" alt="dicoding" width={1000} height={1000} src="/course/dicoding.svg"/>
           <Image className="inline w-28 lg:w-48 aspect-square grayscale hover:grayscale-0" alt="dicoding" width={1000} height={1000} src="/course/binaracademy.svg"/>
@@ -213,7 +211,7 @@ function Main() {
       <section id="contact">
         <h3 className="font-bold text-xl lg:text-3xl mt-7 text-center">Contact</h3>
         <div className="flex justify-around flex-wrap">
-          <div className="rounded-lg overflow-hidden shadow-2xl mt-14 max-w-64 relative relative">
+          <div className="rounded-lg overflow-hidden shadow-2xl mt-14 max-w-64 relative">
             <div className="bg-[url('/contact/dindin.jpg')] bg-center bg-cover h-44"></div>
             <div className="p-6">
               <h4 className="font-bold text-center lg:text-lg text-[#971313]">152023073</h4>
@@ -337,11 +335,11 @@ function Footer() {
 export default function Page() {
   
   return (
-    <>
+    <div className="max-w-screen-2xl m-auto">
       <Navbar/>
       <Start/>
       <Main/>
       <Footer/>
-    </>
+    </div>
   );
 }
